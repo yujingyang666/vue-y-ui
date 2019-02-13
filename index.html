@@ -7,18 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    :root{
+        --font-size: 14px;
+        --button-height: 32px;
+        --button-bg: #FFF;
+        --button-active-bg: #eee;
+        --border-color: #999;
+        --border-color-hover: #666;
+        --border-radius: 4px;
+        --color: #333;
+    }
+    #app{margin: 20px;}
+    body{font-size: var(--font-size)}
+</style>
 <body>
 <div id="app">
-    {{message}}
+    <g-button></g-button>
 </div>
-<script src="./node_modules/vue/dist/vue.min.js"></script>
-<script>
-    new Vue({
-      el:'#app',
-      data:{
-        message:'hi'
-      }
-    })
-</script>
+<script src="./src/app.js"></script>
+
 </body>
 </html>
