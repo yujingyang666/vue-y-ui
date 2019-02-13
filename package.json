@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/yujingyang666/vue-y-ui/issues"
   },
-  "homepage": "https://github.com/yujingyang666/vue-y-ui#readme"
+  "homepage": "https://github.com/yujingyang666/vue-y-ui#readme",
+  "dependencies": {
+    "vue": "^2.6.6"
+  }
 }
