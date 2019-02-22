@@ -2,13 +2,10 @@
   "name": "vue-y-ui",
   "version": "0.0.1",
   "description": "是yang的UI框架\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DvueUI\u001b[D\u001b[D UI框架",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yujingyang666/vue-y-ui.git"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit"
   },
   "keywords": [
     "vue",
@@ -22,15 +19,51 @@
   "homepage": "https://github.com/yujingyang666/vue-y-ui#readme",
   "dependencies": {
     "vue": "^2.6.6",
-    "vue-hot-reload-api": "^2.3.2"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/component-compiler-utils": "^2.5.2",
-    "parcel-bundler": "^1.11.0",
-    "sass": "^1.17.0",
-    "vue-template-compiler": "^2.6.6"
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-unit-jest": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.21"
   },
-  "alias": {
-    "vue" : "./node_modules/vue/dist/vue.common.js"
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "testMatch": [
+      "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
+    ],
+    "testURL": "http://localhost/"
   }
 }

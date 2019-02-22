@@ -9,7 +9,6 @@
 
 <script>
     export default {
-      // props:['icon','iconPosition']
       props:{
         icon:{},
         iconPosition:{
@@ -23,7 +22,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .g-button {
         font-size: var(--font-size);
         height: var(--button-height);

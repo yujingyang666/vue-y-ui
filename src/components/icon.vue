@@ -1,6 +1,6 @@
 <template>
     <svg class="g-icon" aria-hidden="true">
-        <use :xlink:href=`#i-${name}`></use>
+        <use :xlink:href="`#i-${name}`"></use>
     </svg>
 </template>
 
@@ -15,6 +15,5 @@
         width: 1em; height: 1em;
         fill: currentColor;
         overflow: hidden;
-        background: #000;
     }
 </style>
